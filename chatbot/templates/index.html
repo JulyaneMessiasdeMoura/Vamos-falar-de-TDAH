@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<input type="hidden" name="{{ url }}">
+<div class="meio">
+    <div>
+        <p class="titulo">Bem-vindo!</p>
+        <p>Olá, seja bem-vindo ao seu portal descomplicado sobre o Transtorno do 
+            déficit de atenção e hiperatividade - TDAH, desenvolvido exclusivamente 
+            para lhe auxiliar sobre o transtorno.</p>
+    </div>
+    <div class="img_1">
+        <img src="{% static 'img/img_1.png' %}" alt="">
+    </div>
+</div>
+{% endblock %}

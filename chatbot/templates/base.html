@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <title>TDAH</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="logo">
+            <img class="logo_imagem" src="{% static 'img/TDAH.png' %}" alt="">
+            <p>Vamos falar de TDAH ?</p>
+        </div>
+        <nav>
+            <a href="{% url 'index' %}">Página inicial</a>
+            <a href="{% url 'ferramenta' %}">Sobre a ferramenta</a>
+            <a href="{% url 'tdah' %}">O que é TDAH ?</a>
+            <a href="{% url 'ajuda' %}">Ajuda</a>
+            <a href="{% url 'referencias' %}">Referências</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    <button onclick="teste(true)" id="chat_botao" class="chat_botao">&#128172; Vamos conversar por chat</button>
+    <section id="chat" class="visible">
+        <div class="chat_topo">
+            <p>Vamos falar de TDAH</p>
+            <a onclick="teste(false)" href="#">X</a>
+        </div>
+       <div id="chat_meio" class="chat_meio">
+        <p>Digite uma mensagem</p>
+        {% for mensagem in mensagens %}
+            <span><p>{{ mensagem.0 }}</p></span>
+            <p>{{ mensagem.1 }}</p>
+        {% endfor %}
+       </div>
+       <div class="chat_baixo">
+        <form action="chat_enviar" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Digite aqui" name="chat_mensagem" id="chat_mensagem">
+            <input type="submit" value="Enviar">
+        </form>
+       </div>
+    </section>
+    <a id="botao_topo" href="#header">^</a>
+    <footer class="footer">
+        <p>Vamos falar de TDAH ?</p>
+        <p>Contato: messiasdemourajulyane@gmail.com</p>
+        <p>&copy;2022 por Julyane Messias</p>
+    </footer>
+
+    <script src="{% static 'script/js.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<div class="ajuda">
+    <div class="imagem">
+        <figure>
+            <img src="{% static 'img/caps.jpg' %}" alt="O lindo logotipo do MDN." />
+            <figcaption>
+                <p>Endereço: Rua Fernando Marques 641, </p>
+                <p>Floriano, PI, 64800-000</p>
+                <p>Telefone: (89) 3522-0804</p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="imagem">
+        <figure>
+            <img src="{% static 'img/postinho.png' %}" alt="O lindo logotipo do MDN." />
+            <figcaption>
+                <p>Unidades Básicas de Saúde de Floriano</p>
+                <p>Listadas no link a seguir</p>
+                <a href="https://www.floriano.pi.gov.br/postos.php">https://www.floriano.pi.gov.br/postos.php</a>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="imagem">
+        <figure>
+            <img src="{% static 'img/ifpi.png' %}" alt="O lindo logotipo do MDN." />
+            <figcaption>
+                <p>Setor de Psicologia do IFPI-Floriano</p>
+                <p>Psicóloga responsável: Idalina Rosa</p>
+                <a href="mailto: idalinarosa_7@ifpi.edu.br">E-mail: idalinarosa_7@ifpi.edu.br</a>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+{% endblock %}

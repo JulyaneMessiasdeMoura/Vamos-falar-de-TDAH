@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<div class="meio_2">
+    <div>
+        <img src="{% static 'img/img_2.png' %}" alt="">
+    </div>
+    <div class="texto">
+        <p>Sobre a ferramenta “Vamos Falar de TDAH”</p>
+        <p>A ferramenta surgiu como consequência de um projeto de pesquisa para o TCC da aluna do curso de TADS do Instituto federal do Piauí - Campus Floriano (IFPI) que buscou investigar se o transtorno poderia estar ligado às dificuldades em programação dos alunos do eixo de informática do IFPI- Floriano.</p>
+        <button id="botao_mais" class="botao_mostrar" onclick="mostrar_mais()">Mostrar mais</button>
+        <div id="div_mais" class="div_invisivel">
+        <p>Partindo disso, o estudo  teve como  consequência a análise e uma ferramenta informativa,cujo seu objetivo visa informar as pessoas sobre o transtorno do déficit de atenção e hiperatividade, seus sintomas e outras informações a respeito.</p>
+        <p>A ferramenta conta com informações sobre o transtorno e também um Chat web, do tipo Chatbot, para que seus usuários possam interagir com a ferramenta.</p>
+        <p>Público alvo : Alunos do instituto Federal do Piauí Campus Floriano e qualquer outro usuário interessado acima de 18 anos.</p>
+        <p>Tecnologias utilizadas : Python , Django, Linguagem de processamento natural, biblioteca Chatterbot, API conversção.</p>
+        </div>
+        <button id="botao_menos" class="botao_mostrar div_invisivel" onclick="mostrar_menos()">Mostrar menos</button>
+        
+    </div>
+</div>
+{% endblock %}

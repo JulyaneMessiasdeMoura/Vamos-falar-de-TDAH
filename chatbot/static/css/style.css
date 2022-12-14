@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #EEE;
+  
+}
+
+.header{
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.logo_imagem{
+  max-width: 100px;
+  min-width: 50px;
+}
+.logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav a{
+  padding: 0px 0px 0px 10px;
+  text-decoration: none;
+  color: black;
+}
+.meio{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 70vh;
+  max-height: 100vh;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+}
+.footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer p{
+  padding: 5px 0px 5px 0px;
+}
+.titulo{
+  font-size: 3em;
+  color: rgb(184, 0, 184);
+}
+.img_1 img{
+  width: 400px;
+}
+
+.chat_botao{
+  z-index: 50;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  border: 1px solid black;
+  border-radius: 30px;
+  position: fixed;
+  right: 0;
+  top: 90%;
+  margin-right: 30px;
+}
+.meio_2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.meio_2 img{
+  width: 70%
+}
+.meio_2 .texto{
+  padding:0px 15%;
+}
+#chat{
+  width: 250px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  position: fixed;
+  right: 0;
+  bottom: 10%;
+  z-index: 99;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+#chat.visible{
+  visibility: hidden;
+
+}
+
+.chat_topo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+}
+.chat_topo a{
+  text-decoration: none;
+}
+.chat_meio{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #EEE;
+  overflow-y: auto;
+  text-align: start;
+
+}
+.chat_meio p{
+  word-break: normal;
+  color: blue;
+}
+.chat_meio span p{
+  text-align: end;
+  color: black;
+}
+.chat_meio img{
+  margin-right: 5px;
+  width: 25px;
+}
+
+.chat_baixo{
+  padding: 10px;
+  width: 100%;
+}
+.chat_baixo input{
+  width: 90%;
+  height: 30px;
+  border: 0;
+  background-color: white;
+  border: 1px solid black;
+
+}
+.chat_baixo input:focus {outline:none!important;}
+
+.meio_tdah{
+  margin: auto;
+}
+.meio_tdah .tela_100{
+  height: 60vh;
+}
+.tela_2{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+.meio_tdah .tela_100 h1{
+  margin-bottom: 10px;
+}
+.meio_tdah .center{
+  text-align: center;
+  padding:0px 20%;
+}
+#botao_topo{
+  text-decoration: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 30px;
+  position: fixed;
+  left: 0;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 90%;
+}
+
+.div_invisivel{
+  display: none;
+}
+#botao_mais{
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+  border: 1px solid gray;
+}
+#botao_menos{
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+  border: 1px solid gray;
+}
+.ajuda{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.ajuda figure{
+  width: 100%;
+  height: 200px;
+}
+.ajuda .imagem img{
+  width: 100%;
+  height: 100%;
+}
+
+.ajuda figcaption{
+  height: 200px;
+  background-color: rgb(101, 193, 255);
+  padding: 20px;
+}
+.ajuda figcaption p{
+  margin: 5px 0px;
+}
+.referencias div{
+  padding: 10px;
+}
+@media screen and (max-width: 800px) {
+  .header{
+    flex-direction: column;
+    margin: auto;
+  }
+  .logo{
+    width: 100%;
+    justify-content: center;
+  }
+  .logo_imagem{
+    padding: 0px 10px 10px 0px;
+  }
+  .header nav a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  .meio{
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+  }
+  .titulo{
+    font-size: 2em;
+    padding: 0px 0px 10px 0px;
+  }
+  .img_1 img{
+    width: 100vw;
+  }
+  .chat_botao{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 90vh;
+  }
+  .esconder{
+    visibility: hidden;
+  }
+  #chat{
+    width: 90vw;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .logo{
+    flex-direction: column;
+    padding: 0px 0px 5px 0px;
+  }
+}
